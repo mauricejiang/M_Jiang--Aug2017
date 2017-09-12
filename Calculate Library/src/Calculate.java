@@ -30,4 +30,20 @@ public class Calculate {
 	public static double discriminant(double g1, double g2, double g3) {
 		return ((g2 * g2)-4 * g1 * g3);
 	}
+	public static String toImproperFrac(int h1, int h2, int h3) {
+		int h4 = h1*h3+h2;
+		return (h4 + "/"+ h3);
+		
 	}
+	public static String toMixedNum(int i1, int i2) {
+		int i3 = i1/i2;
+		int i4 = i1%i2;
+		return (i3+" "+i4+"/"+i2);
+	}
+	public static String foil(int j1, int j2, int j3, int j4) {
+		int j5 = j1 * j3;
+		int j6 = (j1*j4)+(j2*j3);
+		int j7 = j2*j4;
+		return (j5+"n^2"+" "+"+"+" "+j6+"n"+" "+j7);
+	}
+}
