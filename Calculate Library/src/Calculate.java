@@ -46,4 +46,51 @@ public class Calculate {
 		int j7 = j2*j4;
 		return (j5+"n^2"+" "+"+"+" "+j6+"n"+" "+j7);
 	}
+	public static boolean isDivisibleBy(int k1, int k2) {
+		if (k1 % k2 == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	
+	}
+	public static double absValue(double l1) {	
+		if (l1 >= 0) {
+			return l1;
+	}	else {
+			return -l1;
+}
+	}
+
+	public static double max(double m1, double m2) {
+		if (m1 > m2) {
+			return m1;
+	}   else {
+			return m2;
+	}
+	}
+	public static double max (double n1, double n2, double n3) {
+		if (n1 > n2 && n1 > n3) {
+			return n1;
+	}	else if (n2 > n1 && n2 > n3){
+			return n2;
+	}
+		else {
+			return n3;
+		}
+	}
+
+	public static int min(int o1, int o2) {
+		if (o1 > o2) {
+			return o1;
+	}	else {
+			return o2;
+		}
+	}
+	public static double round2(double p1) {
+		if (p1 * 1000 % 10 < 5) {
+			return (p1 * 1000) - (p1 * 1000 % 10); }
+		else {
+			return ((p1 * 1000) + (1 + (p1 * 1000 % 10)))/1000; }
+	}
 }
