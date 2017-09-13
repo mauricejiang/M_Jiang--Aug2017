@@ -88,9 +88,6 @@ public class Calculate {
 		}
 	}
 	public static double round2(double p1) {
-		if (p1 * 1000 % 10 < 5) {
-			return (p1 * 1000) - (p1 * 1000 % 10); }
-		else {
-			return ((p1 * 1000) + (1 + (p1 * 1000 % 10)))/1000; }
+		if (p1 < p1 
 	}
 }
