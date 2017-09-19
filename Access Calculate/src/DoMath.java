@@ -23,6 +23,6 @@ public class DoMath
 		System.out.println(Calculate.min(2, 7));
 		//System.out.println(Calculate.round2(12.7589));
 		System.out.println(Calculate.exponent(2.5, 9));
-		System.out.println(Calculate.factorial(90));
+		System.out.println(Calculate.factorial(1));
 			}
 }

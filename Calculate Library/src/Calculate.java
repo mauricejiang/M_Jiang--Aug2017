@@ -104,8 +104,9 @@ public class Calculate {
 	}
 	public static int factorial(int r) {
 		int answer=r;
-		for(int i=r; i<=1; i--) {
-			answer=r*r;
+		int number=5;
+		for(int i=r; i>number; i++) {
+			answer=r*answer;
 		}
 		return answer;
 	}
