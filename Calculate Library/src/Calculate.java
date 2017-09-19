@@ -87,7 +87,27 @@ public class Calculate {
 			return o2;
 		}
 	}
-	public static double round2(double p1) {
-		if (p1 < p1 
+	/*public static double round2(double p1) {
+		double p2 = (int) p1;
+		double p3 = (p1 - 12);
+		double p4 = p3 * (int) 100;
+		
+		return p2 + p4;
+	}*/
+	
+	public static double exponent(double q1, int q2) {
+		double answer=q1;
+		for(int i=1; i<q2; i++) {
+			answer=q1*answer;
+		}
+		return answer;
 	}
-}
+	public static int factorial(int r) {
+		int answer=r;
+		for(int i=r; i<=1; i--) {
+			answer=r*r;
+		}
+		return answer;
+	}
+	}
+

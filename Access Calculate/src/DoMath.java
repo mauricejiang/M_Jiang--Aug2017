@@ -19,8 +19,10 @@ public class DoMath
 		System.out.println(Calculate.isDivisibleBy(8, 2));
 		System.out.println(Calculate.absValue(-2));
 		System.out.println(Calculate.max(3, 11));
-		System.out.println(Calculate.max(222, 34, 4));
+		System.out.println(Calculate.max(22, 34, 4));
 		System.out.println(Calculate.min(2, 7));
-		System.out.println(Calculate.round2(12.7589));
+		//System.out.println(Calculate.round2(12.7589));
+		System.out.println(Calculate.exponent(2.5, 9));
+		System.out.println(Calculate.factorial(90));
 			}
 }
