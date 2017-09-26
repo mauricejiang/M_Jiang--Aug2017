@@ -87,14 +87,27 @@ public class Calculate {
 			return o2;
 		}
 	}
-	/*public static double round2(double p1) {
-		double p2 = (int) p1;
-		double p3 = (p1 - 12);
-		double p4 = p3 * (int) 100;
-		
-		return p2 + p4;
-	}*/
-	
+	public static double round2(double number){
+        if(number < 0){//rounds a number that is negative
+            number *= -1;//converts the number to a positive number
+            if(number * 1000 % 10 < 5){
+                number = (number * 1000 - number * 1000 % 10) / 1000;
+            }
+            else{
+                number = (10 - number * 1000 % 10 + number * 1000) / 1000;
+            }
+            number *= -1;//converts the number back to a negative number
+            return number;
+        }
+        else{//rounds a number that is positive
+            if(number * 1000 % 10 < 5){
+                return (number * 1000 - number * 1000 % 10) / 1000;
+            }
+            else{
+                return (10 - number * 1000 % 10 + number * 1000) / 1000;
+            }
+        }
+    }
 	public static double exponent(double q1, int q2) {
 		double answer=q1;
 		for(int i=1; i<q2; i++) {
@@ -102,13 +115,16 @@ public class Calculate {
 		}
 		return answer;
 	}
-	public static int factorial(int r) {
-		int answer=r;
-		int number=5;
-		for(int i=r; i>number; i++) {
-			answer=r*answer;
-		}
-		return answer;
-	}
-	}
+	public static int factorial(int number) {
+		  int product = 1;
+	        if(number == 0){
+	            return 1;
+	        }
+	        for(int i = 1; i <= number; i++){
+                product *= i;
+            }
+            return product;
 
+	}
+	
+}
