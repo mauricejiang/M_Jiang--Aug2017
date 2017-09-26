@@ -126,5 +126,12 @@ public class Calculate {
             return product;
 
 	}
+	public static boolean isPrime(int number){
+		for(int i=2; i < number; i++);
+		if(s % i != 0){
+			return true;
+		}else {
+			return false;
+		}
 	
 }
