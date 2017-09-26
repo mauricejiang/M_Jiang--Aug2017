@@ -133,5 +133,8 @@ public class Calculate {
 		}else {
 			return false;
 		}
+	public static int gcf(int number1, int number2){
+		for(int i=2; i < number1; i++);
+			for(int j=2
 	
 }
