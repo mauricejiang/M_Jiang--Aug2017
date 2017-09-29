@@ -133,8 +133,46 @@ public class Calculate {
 		}else {
 			return false;
 		}
-	public static int gcf(int number1, int number2){
-		for(int i=2; i < number1; i++);
-			for(int j=2
+	public static int gcf(int num1, int num2) {
+		if (isPrime(num1) && isPrime(num2)) {
+			return 1;
+		}
+		while (num1 != 0 && num2 != 0) {
+			int num3 = num2;
+			num2 = num1 % num2;
+			num1 = num3;
+		}
+		return num1 + num2;
 	
 }
+		public static double sqrt(double x) {
+		if (x < 0) {
+			throw new IllegalArgumentException("You can't sqrt a negative number. Use only positive numbers.");
+		}
+		double c = x;
+		double t = c;
+		double errorTolerance = 1e-15;
+		while ((t - c / t) > errorTolerance * t) {
+			t = (c / t + t) / 2.0;
+		}
+		return round2(t);
+	}
+
+	public static String quadForm(int a, int b, int c) {
+		if(a==0) {
+			throw new IllegalArgumentException("Variable \"a\" must be greater than zero.");
+		}
+		if (discriminant(a,b,c)<0) {
+			return "no real roots";
+		}
+		double plus = round2((-b +sqrt(discriminant(a,b,c)))/(2*a));
+		double minus = round2((-b -sqrt(discriminant(a,b,c)))/(2*a));
+		if (discriminant(a,b,c)==0) {
+			String ans1= plus+"";
+			return ans1;
+		} else {
+			String ans2=plus +" and "+ minus;
+			return ans2;
+		}
+		
+	}
