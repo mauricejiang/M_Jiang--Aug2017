@@ -87,24 +87,24 @@ public class Calculate {
 			return o2;
 		}
 	}
-	public static double round2(double number){
-        if(number < 0){//rounds a number that is negative
-            number *= -1;//converts the number to a positive number
-            if(number * 1000 % 10 < 5){
-                number = (number * 1000 - number * 1000 % 10) / 1000;
+	public static double round2(double num){
+        if(num < 0){
+            num *= -1;
+            if(num * 1000 % 10 < 5){
+                num = (num * 1000 - num * 1000 % 10) / 1000;
             }
             else{
-                number = (10 - number * 1000 % 10 + number * 1000) / 1000;
+                num = (10 - num * 1000 % 10 + num * 1000) / 1000;
             }
-            number *= -1;//converts the number back to a negative number
-            return number;
+            num *= -1;
+            return num;
         }
-        else{//rounds a number that is positive
-            if(number * 1000 % 10 < 5){
-                return (number * 1000 - number * 1000 % 10) / 1000;
+        else{
+            if(num * 1000 % 10 < 5){
+                return (num * 1000 - num * 1000 % 10) / 1000;
             }
             else{
-                return (10 - number * 1000 % 10 + number * 1000) / 1000;
+                return (10 - num * 1000 % 10 + num * 1000) / 1000;
             }
         }
     }
@@ -115,23 +115,24 @@ public class Calculate {
 		}
 		return answer;
 	}
-	public static int factorial(int number) {
+	public static int factorial(int num) {
 		  int product = 1;
-	        if(number == 0){
+	        if(num == 0){
 	            return 1;
 	        }
-	        for(int i = 1; i <= number; i++){
+	        for(int i = 1; i <= num; i++){
                 product *= i;
             }
             return product;
 
 	}
-	public static boolean isPrime(int number){
-		for(int i=2; i < number; i++);
-		if(s % i != 0){
-			return true;
-		}else {
-			return false;
+	public static boolean isPrime(int num){
+		for (int i = 2; i < num; i++) {
+			if (isDivisibleBy(num, i) == true) {
+				return false;
+			}
+		}
+		return true;
 		}
 	public static int gcf(int num1, int num2) {
 		if (isPrime(num1) && isPrime(num2)) {
@@ -145,34 +146,33 @@ public class Calculate {
 		return num1 + num2;
 	
 }
-		public static double sqrt(double x) {
-		if (x < 0) {
-			throw new IllegalArgumentException("You can't sqrt a negative number. Use only positive numbers.");
+		public static double sqrt(double num) {
+		double answer = num;
+		double num1 = num;
+		double x = answer;
+		if (num < 0) {
+			throw new IllegalArgumentException("You can't square root a negative number.");
 		}
-		double c = x;
-		double t = c;
-		double errorTolerance = 1e-15;
-		while ((t - c / t) > errorTolerance * t) {
-			t = (c / t + t) / 2.0;
+		else if (num == 0) {
+			x = 0;
 		}
-		return round2(t);
-	}
-
-	public static String quadForm(int a, int b, int c) {
-		if(a==0) {
-			throw new IllegalArgumentException("Variable \"a\" must be greater than zero.");
-		}
-		if (discriminant(a,b,c)<0) {
-			return "no real roots";
-		}
-		double plus = round2((-b +sqrt(discriminant(a,b,c)))/(2*a));
-		double minus = round2((-b -sqrt(discriminant(a,b,c)))/(2*a));
-		if (discriminant(a,b,c)==0) {
-			String ans1= plus+"";
-			return ans1;
-		} else {
-			String ans2=plus +" and "+ minus;
-			return ans2;
+		else if (num > 0){
+			num1 = num / 2;
+			x = (num - (num / num1)) / 2;
+		} while ((num1 - x) != 0);
+			return round2(x);
+		
 		}
 		
-	}
+		
+		/*public static String quadForm(int num, int num2, int num3) {
+		if ((discriminant (num, num2, num3)<0) {
+			System.out.println("no real root");
+		}*/
+		
+		
+		
+		}
+
+	
+
