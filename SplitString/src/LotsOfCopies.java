@@ -15,5 +15,19 @@ import java.util.Arrays;
 			for(int i = 0; i<arr.length; i++) {
 				arr[i]++;
 			}
+			/* a = start;
+			 * b = a;
+			 * a = newValue;
+			 */
+			int b = x;
+			x = 17;
+			System.out.println("b:" + b);
+			
+			String bStr = str;
+			str = "Hi There!";
+			System.out.println("bStr:" + bStr);
+			
+			int[] barr = arr;
+			for(int i = );
 		}
 	}
