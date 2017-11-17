@@ -16,10 +16,10 @@ import java.util.Arrays;
 				arr[i]++;
 			}
 			/* a = start;
-			 * b = a;
-			 * a = newValue;
-			 */
-			int b = x;
+			 b = a;
+			 a = newValue;
+			*/
+		int b = x;
 			x = 17;
 			System.out.println("b:" + b);
 			
@@ -29,5 +29,6 @@ import java.util.Arrays;
 			
 			//int[] barr = arr;
 			//for(int i = );
+			
 		}
-	}
+		}
