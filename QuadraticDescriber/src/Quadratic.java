@@ -2,9 +2,11 @@ public class Quadratic {
  public static double discriminant(double a, double b, double c) {
 		return ((b * b)-4 * a * c);
 	}
+ 
   public static int square(int a) {
 		return a * a;
 	}
+  
   public static double round2(double num){
         if(num < 0){
             num *= -1;
