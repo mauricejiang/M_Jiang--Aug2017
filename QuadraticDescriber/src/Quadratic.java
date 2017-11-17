@@ -43,6 +43,9 @@ public class Quadratic {
 			return round2(x);
 		
 		}
+  	
+  	
+  	
   
       double postive = round2((-b + sqrt(discriminant)) / 2 * a);
 	    double negative = round2((-b - sqrt(discriminant)) / 2 * a);
